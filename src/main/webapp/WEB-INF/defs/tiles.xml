@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="loginpage" template="/WEB-INF/layout/loginLayout.jsp">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/loginpage.jsp" />
+	</definition>
+
+	<definition name="homepage" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+	<definition name="index" extends="homepage">
+		<put-attribute name="title" value="Index" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="profile" extends="homepage">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/jsp/profile.jsp" />
+		<put-attribute name="current" value="profile" />
+	</definition>
+
+	<definition name="employee_detail" extends="homepage">
+		<put-attribute name="title" value="Employee Detail" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-details.jsp" />
+		<put-attribute name="current" value="employees" />
+	</definition>
+
+	<definition name="master_userstory" extends="homepage">
+		<put-attribute name="title" value="Master User Story" />
+		<put-attribute name="body" value="/WEB-INF/jsp/master_userstory.jsp" />
+		<put-attribute name="current" value="mus" />
+	</definition>
+	<definition name="user_story_detail" extends="homepage">
+		<put-attribute name="title" value="User Story Details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user_story_detail.jsp" />
+		<put-attribute name="current" value="mus" />
+	</definition>
+	<definition name="master_sprint" extends="homepage">
+		<put-attribute name="title" value="Master Sprint" />
+		<put-attribute name="body" value="/WEB-INF/jsp/master_sprint.jsp" />
+		<put-attribute name="current" value="ms" />
+	</definition>
+	<definition name="master_burndownChart" extends="homepage">
+		<put-attribute name="title" value="Master Burndown Chart" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/master_burndownChart.jsp" />
+		<put-attribute name="current" value="mbc" />
+	</definition>
+
+	<definition name="dev_userstory" extends="homepage">
+		<put-attribute name="title" value="Development" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dev_userstory.jsp" />
+		<put-attribute name="current" value="devUserStory" />
+	</definition>
+
+	<definition name="test_userstory" extends="homepage">
+		<put-attribute name="title" value="Test" />
+		<put-attribute name="body" value="/WEB-INF/jsp/test_userstory.jsp" />
+		<put-attribute name="current" value="testUserStory" />
+	</definition>
+
+	<definition name="admin" extends="homepage">
+		<put-attribute name="title" value="Development" />
+		<put-attribute name="body" value="/WEB-INF/jsp/admin.jsp" />
+		<put-attribute name="current" value="employees" />
+	</definition>
+
+	<definition name="editEmployee" extends="homepage">
+		<put-attribute name="title" value="Edit Employee" />
+		<put-attribute name="body" value="/WEB-INF/jsp/edit_employee.jsp" />
+		<put-attribute name="current" value="employees" />
+	</definition>
+
+	<definition name="editSprint" extends="homepage">
+		<put-attribute name="title" value="Edit Sprint" />
+		<put-attribute name="body" value="/WEB-INF/jsp/editSprint.jsp" />
+		<put-attribute name="current" value="employees" />
+	</definition>
+
+	<definition name="sprint_details" extends="homepage">
+		<put-attribute name="title" value="sprint_details" />
+		<put-attribute name="body" value="/WEB-INF/jsp/sprint_details.jsp" />
+		<put-attribute name="current" value="ms" />
+	</definition>
+
+</tiles-definitions>

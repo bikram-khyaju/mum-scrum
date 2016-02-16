@@ -1,0 +1,13 @@
+diff a/MUMScrum/src/main/java/com/project/neon/service/InitDbService.java b/MUMScrum/src/main/java/com/project/neon/service/InitDbService.java	(rejected hunks)
+@@ -100,7 +100,10 @@
+ 			employee2.setPassword(encoder.encode(name));
+ 			employee2.setEnabled(true);
+ 			List<Role> roles2 = new ArrayList<>();
+-			roles2.add(roleDev);
++			if(name.equals("test"))
++				roles2.add(roleTest);
++			else
++				roles2.add(roleDev);
+ 			employee2.setRoles(roles2);
+ 			employeeRepository.save(employee2);
+ 			employees.add(employee2);
